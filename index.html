@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wordle Routine</title>
+    <script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>
+    <script>
+        sorttable.sort_alpha = function(a, b) { 
+            return a[0].localeCompare(b[0], undefined, { ignorePunctuation: true, sensitivity: "base" });
+        };
+    </script>
+    <style>
+    html {
+        padding: 0;
+        background: #222;
+        color: #ccf;
+    }
+    a {
+        color: #08f;
+    }
+    a:visited {
+        color: #6bf;
+    }
+    td, th {
+        padding: 15px;
+    }
+    table {
+        border-collapse: collapse;
+    }
+    table.sortable th {
+        user-select: none;
+        -ms-user-select: none;
+        -webkit-user-select: none;
+        cursor: pointer;
+    }
+    table.sortable th:not(.sorttable_sorted):not(.sorttable_sorted_reverse):not(.sorttable_nosort):after { 
+        content: " \25B4\25BE";
+    }
+    </style>
+</head>
+<body>
+    <p><em>Compiled by <a href="http://conorobrien-foxx.github.io/">Conor O'Brien</a>. This list is a work in progress. Last updated: March 6th, 2022 (02:56 ET).</em></p>
+    <h1>Canonical Worlde Variants</h1>
+    <p>For Wordle and its English-adjacent cousins.</p>
+    <table class="sortable">
+        <tr>
+            <th>Name</th>
+            <th>Credit</th>
+            <th>Guesses</th>
+            <th>Words</th>
+            <th>Word Length</th>
+            <th>Daily?</th>
+            <th>Free Play?</th>
+            <th>Notes</th>
+        </tr>
+        <tr>
+            <td><a href="https://www.nytimes.com/games/wordle/index.html">Wordle</a></td>
+            <td>New York Times (previously <a href="https://twitter.com/powerlanguish?lang=en">Josh Wardle</a>)</td>
+            <td>6</td>
+            <td>1</td>
+            <td>5</td>
+            <td>Yes</td>
+            <td>No</td>
+            <td>Wordle.</td>
+        </tr>
+        <tr>
+            <td><a href="https://www.wordleunlimited.com/">Wordle Unlimited</a></td>
+            <td>Unknown</td>
+            <td>6</td>
+            <td>1</td>
+            <td sorttable_customkey="5">4&ndash;11</td>
+            <td>No</td>
+            <td>Yes</td>
+            <td>Wordle, but not restricted to daily. You can share "<a href="https://www.wordleunlimited.com/?wardle=dHJpbml0YXJpYW4"><strong>War</strong>dles</a>" with arbitrarily-chosen words.</td>
+        </tr>
+        <tr>
+            <td><a href="https://zaratustra.itch.io/dordle">Dordle</a></td>
+            <td><a href="https://zaratustra.itch.io/">Guilherme S. Töws</a></td>
+            <td>7</td>
+            <td>2</td>
+            <td>5</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td><a href="https://www.quordle.com">Quordle</a></td>
+            <td>Freddie Meyer and David Mah</td>
+            <td>9</td>
+            <td>4</td>
+            <td>5</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td><a href="https://hedalu244.github.io/diffle/">Diffle</a></td>
+            <td><a href="https://github.com/hedalu244/diffle">hedalu244</a></td>
+            <!-- a realy large number is basically just infinity -->
+            <td sorttable_customkey="99999999">&infin;</td>
+            <td>1</td>
+            <td>N</td>
+            <td>Yes</td>
+            <td>No</td>
+        </tr>
+    </table>
+    <h1>Exotic Wordle Variants</h1>
+    <p>For games following the general Wordle format, but deviating significantly from the usual format.</p>
+    <table class="sortable">
+        <tr>
+            <th>Name</th>
+            <th>Credit</th>
+            <th>Guesses</th>
+            <th>Words</th>
+            <th>Word Length</th>
+            <th>Daily?</th>
+            <th>Free Play?</th>
+            <th>Notes</th>
+        </tr>
+        <tr>
+            <td><a href="https://nerdlegame.com/">Nerdle</a></td>
+            <td><a href="https://twitter.com/richardajmann">Richard Mann</a>, Imogen Mann, <a href="https://twitter.com/MarcusTettmar">Marcus Tettmar</a>, <a href="https://twitter.com/LordBaldrick">Gavin Manning</a></td>
+            <td>6</td>
+            <td>1</td>
+            <td sorttable_customkey="8">8 (Mini: 6)</td>
+            <td>Yes</td>
+            <td>No</td>
+            <td>Wordle, but you solve a math equality.</th>
+        </tr>
+        <tr>
+            <td><a href="https://pwahs.github.io/fillominordle/">Fillominordle</a></td>
+            <td><a href="https://github.com/pwahs">pwahs</a></a></td>
+            <td sorttable_customkey="5">5 / 6 / 7</td>
+            <td>1</td>
+            <td>9</td>
+            <td>Yes</td>
+            <td>No</td>
+            <td>Wordle where you solve a 3x3, 4x4, or 5x5 <a href="https://en.wikipedia.org/wiki/Fillomino">Fillomino</a>.</td>
+        </tr>
+        <tr>
+            <td><a href="https://worldle.teuteuf.fr/">Worldle</a></td>
+            <td><a href="https://twitter.com/teuteuf">teuteuf</a></a></td>
+            <td>6</td>
+            <td>1</td>
+            <td>N</td>
+            <td>Yes</td>
+            <td>No</td>
+            <td>Wordle where you guess the country or territory given an image, with distance and location as feedback indicators.</td>
+        </tr>
+        <tr>
+            <td><a href="https://worldle.teuteuf.fr/">Squardle</a></td>
+            <td><a href="https://fubargames.se/">Pelle / FurbyFubar</a></a></td>
+            <td sorttable_customkey="10">10&ndash;15</td>
+            <td>6</td>
+            <td>5</td>
+            <td>Yes</td>
+            <td>No</td>
+            <td>Wordle where you guess 6 words arranged on a 5x5 crossword-esque grid.</td>
+        </tr>
+        <tr>
+            <td><a href="https://globle-game.com/">Globle</a></td>
+            <td><a href="https://the-abe-train.com/">Abe Train</a></a></td>
+            <td sorttable_customkey="99999999">&infin;</td>
+            <td>1</td>
+            <td>N</td>
+            <td>Yes</td>
+            <td>No</td>
+            <td>Wordle where you guess a random country on an interactive globe.</td>
+        </tr>
+        <tr>
+            <td><a href="https://keftcha.github.io/sha256le/">SHA256le</a></td>
+            <td><a href="https://github.com/keftcha">keftcha</a></a></td>
+            <td sorttable_customkey="99999999">&infin;</td>
+            <td>1</td>
+            <td>64</td>
+            <td>No</td>
+            <td>Yes</td>
+            <td>Wordle where you guess&hellip; a random <a href="https://en.wikipedia.org/wiki/SHA-256">SHA-256</a>.</td>
+        </tr>
+        
+    </table>
+</body>
+</html>
